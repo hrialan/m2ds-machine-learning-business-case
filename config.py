@@ -1,0 +1,1 @@
+PERCENTAGE_CUT_TRAIN_TEST = 0.7 # If modification => Delete .joblib file
