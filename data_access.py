@@ -41,7 +41,7 @@ class Data:
             return 2
         elif avg_sales < 6634:
             return 3
-        elif avg_sales < 20719:
+        elif avg_sales < 20825:
             return 4
         else:
             return 0
