@@ -91,12 +91,12 @@ if compute_pred:
 
     for store_id in STORE_IDS:
         test_scaled = inputs_test_scaled[inputs_test['Store'] == store_id]
-        date = np.array(test_date[inputs_test['Store'] == store_id])
+        date = test_date[inputs_test['Store'] == store_id].to_numpy()
         pred = regr.predict(test_scaled)
         for i in range(len(pred)):
             data_studio_ids.append(store_id)
             data_studio_pred.append(pred[i])
-            data_studio_date.append(date[i])
+            data_studio_date.append(date[i][0])
 
     df_data_studio = pd.DataFrame()
     df_data_studio['Store'] = data_studio_ids
